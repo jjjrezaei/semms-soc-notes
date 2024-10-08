@@ -1,34 +1,31 @@
 from flask import Flask, render_template
 from markupsafe import escape
 from docx import Document
+import glob
+import pyperclip
+
 
 app = Flask(__name__)
-
-def print_docx_content(docx_path):
-    doc = Document(docx_path)
-    
-    fulltext = []
-
-    for paragraph in doc.paragraphs:
-        fulltext.append(paragraph.text)
-    return "erm"
-    return '\n'.join(fulltext)
 
 @app.route('/')
 @app.route('/index/')
 def index():
 
-    document = Document("Sorrows of Empire.docx")
-    fulltext = []
 
+    for i in glob.glob('AllSemmsFiles/*.docx', recursive=True):
+        document = Document(i) #document to be pdf
+
+    fulltext = " " #create list
     for paragraph in document.paragraphs:
-        fulltext.append(paragraph.text)
-    itemsToWriteToFile = itemsToWriteToFile.translate(None, "(),\"\\n")
-    return ''.join(fulltext)
+        fulltext = fulltext + paragraph.text# + "\n"
 
-    return '\n'.join(fulltext)
-#    print_docx_content("Sorrows of Empire.docx")
-    return "test"
+    print(fulltext)
+    pyperclip.copy(fulltext)
+
+# parse through each document with the above code
+# return the link to the document when found a word
+# parse through the next document until finished
+    return fulltext
 
 
 @app.route('/about/')
