@@ -10,8 +10,6 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index/')
 def index():
-
-
     for i in glob.glob('AllSemmsFiles/*.docx', recursive=True):
         document = Document(i) #document to be pdf
 
@@ -21,13 +19,7 @@ def index():
 
     print(fulltext)
     pyperclip.copy(fulltext)
-
+    return fulltext
 # parse through each document with the above code
 # return the link to the document when found a word
 # parse through the next document until finished
-    return fulltext
-
-
-@app.route('/about/')
-def about():
-    return '<h3>This is a Flask web application.</h3>'
