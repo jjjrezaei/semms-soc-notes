@@ -1,25 +1,32 @@
-from flask import Flask, render_template
-from markupsafe import escape
-from docx import Document
-import glob
-import pyperclip
-
+from flask import Flask, render_template, request, url_for, flash, redirect
 
 app = Flask(__name__)
+app.config['SECRET KEY'] = '6bbcaba9041a7ca857a93c2a115a793164137f148ffaa96d'
+
+messages = [{'title': 'Message One',
+             'content': 'Message One Content'},
+            {'title': 'Message Two',
+             'content': 'Message Two Content'}
+            ]
 
 @app.route('/')
-@app.route('/index/')
 def index():
-    for i in glob.glob('AllSemmsFiles/*.docx', recursive=True):
-        document = Document(i) #document to be pdf
+    return render_template('index.html', messages=messages)
 
-    fulltext = " " #create list
-    for paragraph in document.paragraphs:
-        fulltext = fulltext + paragraph.text# + "\n"
+# ...
 
-    print(fulltext)
-    pyperclip.copy(fulltext)
-    return fulltext
-# parse through each document with the above code
-# return the link to the document when found a word
-# parse through the next document until finished
+@app.route('/create/', methods=('GET', 'POST'))
+def create():
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+
+        if not title:
+            flash('Title is required!')
+        elif not content:
+            flash('Content is required!')
+        else:
+            messages.append({'title': title, 'content': content})
+            return redirect(url_for('index'))
+
+    return render_template('create.html')
