@@ -15,4 +15,4 @@ in progress:
 future additions:
 - ability to upload and move files and create new folders (should this be available to signed in users? could create system so select people have edit access)
 - self organizing files (all page titles and assets should be stored in variables so files can be uploaded and a single name and location can be chosen by user, the rest automated)
-- way to clean up formatting of existing .doxc and .doc files en masse. may require large brute force effort (so far, documents are being manually added, see https://semm.emrysmayell.com/philosophy/ for exmaples
+- way to clean up formatting of existing .doxc and .doc files en masse. may require large brute force effort (so far, documents are being manually added, see https://semm.emrysmayell.com/Philosophy/ for exmaples
