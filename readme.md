@@ -5,14 +5,15 @@ recently added:
 - ability to download files
 - when new webpage is made for a document, index.php can be copied into new directory with no changes
 - basic search function (each page must be manually added, current version is mainly visual mockup)
+- adjustable font adjusts font and element sizes dynamically and remembers preference with localhost cookie
+- page templates (current have templates for "list" pages (lists of folders and files) and "document" pages (pages for displaying and downloading individual documents))
 
 in progress:
 - search bar functionality
   - search text on page as well as page titles
   - automatically add new pages to search (search should index entire site minus blacklist)
-- adjustable font (currently adjusts sizes correctly and remembers preference with localhost cookie but needs formatting adjustments for text sizes over 20px)
+- automatic creation of pages upon upload (a document upload will automatically trigger the creation of a new document page as well as a new list page if needed)
 
 future additions:
 - ability to upload and move files and create new folders (should this be available to signed in users? could create system so select people have edit access)
-- self organizing files (all page titles and assets should be stored in variables so files can be uploaded and a single name and location can be chosen by user, the rest automated)
-- way to clean up formatting of existing .doxc and .doc files en masse. may require large brute force effort (so far, documents are being manually added, see https://semm.emrysmayell.com/Philosophy/ for exmaples
+- way to clean up formatting of existing .doxc and .doc files en masse. may require large brute force effort (so far, documents are being manually added, see https://semm.emrysmayell.com/Philosophy/files/Existentialism for exmaples
