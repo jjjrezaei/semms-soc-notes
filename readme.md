@@ -18,4 +18,4 @@ in progress:
 
 future additions:
 - ability to upload and move files and create new folders (should this be available to signed in users? could create system so select people have edit access)
-- way to clean up formatting of existing .doxc and .doc files en masse. may require large brute force effort (so far, documents are being manually added, see https://semm.emrysmayell.com/Philosophy/files/Existentialism for exmaples
+- way to clean up formatting of existing .doxc and .doc files en masse. may require large brute force effort (so far, documents are being manually added, see https://semm.emrysmayell.com/Philosophy/files/Existentialism for examples
