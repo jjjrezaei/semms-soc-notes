@@ -1,0 +1,272 @@
+<div id="footer-left" class="foot">
+    <div class="copyright-div">
+        <p class="copyright">
+            © Semm
+        </p>
+    </div>
+    <button id="theme-button">
+        <svg class="light" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM80-434.5q-19.15 0-32.33-13.17Q34.5-460.85 34.5-480t13.17-32.33Q60.85-525.5 80-525.5h80q19.15 0 32.33 13.17Q205.5-499.15 205.5-480t-13.17 32.33Q179.15-434.5 160-434.5H80Zm720 0q-19.15 0-32.33-13.17Q754.5-460.85 754.5-480t13.17-32.33Q780.85-525.5 800-525.5h80q19.15 0 32.33 13.17Q925.5-499.15 925.5-480t-13.17 32.33Q899.15-434.5 880-434.5h-80Zm-320-320q-19.15 0-32.33-13.17Q434.5-780.85 434.5-800v-80q0-19.15 13.17-32.33Q460.85-925.5 480-925.5t32.33 13.17Q525.5-899.15 525.5-880v80q0 19.15-13.17 32.33Q499.15-754.5 480-754.5Zm0 720q-19.15 0-32.33-13.17Q434.5-60.85 434.5-80v-80q0-19.15 13.17-32.33Q460.85-205.5 480-205.5t32.33 13.17Q525.5-179.15 525.5-160v80q0 19.15-13.17 32.33Q499.15-34.5 480-34.5ZM222.17-673.93l-43-42Q165.5-728.61 166-747.76t13.17-33.07q13.44-13.67 32.59-13.67 19.15 0 32.07 13.67l42.24 43q12.67 13.44 12.55 31.71-.12 18.27-12.55 31.95-12.68 13.67-31.45 13.41-18.77-.26-32.45-13.17Zm494 494.76-42.24-43q-12.67-13.44-12.67-32.09 0-18.65 12.67-31.57 12.68-13.67 31.45-13.17t32.45 13.17l43 41.76q13.67 12.68 13.17 31.83t-13.17 33.07q-13.44 13.67-32.59 13.67-19.15 0-32.07-13.67Zm-42-494.76Q660.5-686.61 661-705.38t13.17-32.45l41.76-43q12.68-13.67 31.83-13.17t33.07 13.17q13.67 13.44 13.67 32.59 0 19.15-13.67 32.07l-43 42.24q-13.44 12.67-31.71 12.55-18.27-.12-31.95-12.55Zm-495 494.76q-13.67-13.44-13.67-32.59 0-19.15 13.67-32.07l43-42.24q13.44-12.67 32.09-12.67 18.65 0 31.57 12.67 13.67 12.68 13.17 31.45t-13.17 32.45l-41.76 43Q231.39-165.5 212.24-166t-33.07-13.17Z"/></svg>
+        <svg class="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480.24-116.41q-153.63 0-258.73-104.98Q116.41-326.37 116.41-480q0-133.93 84.74-235.43t223.31-123.05q15.39-3.43 27.54 1.35 12.15 4.78 19.83 14.02 7.91 9.24 9.72 22.2 1.82 12.95-4.75 26.11-13.89 25.04-21.31 51.65-7.42 26.61-7.42 55.5 0 91.67 64.31 155.87 64.32 64.19 156.23 64.19 28.37 0 56.48-7.44 28.11-7.45 50.91-20.58 12.91-5.8 25.13-4.11 12.22 1.7 21.22 8.13 9.76 6.44 14.54 18.23 4.78 11.8 1.59 27.95Q820.17-291 717.63-203.71q-102.54 87.3-237.39 87.3Z"/></svg>
+    </button>
+</div>
+
+
+<div id="footer-center" class="foot">
+    <div class="min">
+        <span>—</span>
+    </div>
+    <div id="font-slider">
+        <div id="bubble"></div>
+        <input id="range" type="range" name ="range" value="20" min="14" max="28">
+    </div>
+    <div class="max">
+        <span>+</span>
+    </div>
+</div>
+
+<div id="footer-right" class="foot">
+    <div class="footer-menu">
+        <a href="/Syllabus/">
+            Syllabus
+        </a>
+        <a href="/Resources/">
+            Resources
+        </a>
+    </div>
+</div>
+
+<div id="up-btn">
+    <button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"><polygon points="540 72.35 0 1007.65 1080 1007.65 540 72.35"/></svg>
+    </button>
+</div>
+
+<script>
+
+// SEARCH BAR
+
+// OPEN MOBILE SEARCH BAR
+
+function addSearch() {
+    const boxes = document.querySelectorAll('#search-div, #search-button, #search-x-svg-div, #search-bar, #header-left, #header-right, #mm, #logo-div');
+    const boxes2 = document.querySelectorAll('#mm, #logo-div');
+
+    for (const box of boxes) {
+        box.classList.add('open');
+        box.classList.remove('default');
+    }
+
+    for (const box of boxes2) {
+        box.classList.add('search');
+    }
+
+    setTimeout(function() {
+        const boxes = document.querySelectorAll('#mm, #logo-div');
+
+        for (const box of boxes) {
+            box.classList.add('searching');
+        }
+    }, 300);
+}
+
+// CLOSE MOBILE SEARCH BAR
+
+function clearSearch() {
+    let x = document.getElementById("search-bar").value;
+    if (x == "") {
+        setTimeout(function() {
+            const boxes = document.querySelectorAll('#search-div, #search-button, #search-x-svg-div, #search-bar, #logo-div, #header-left');
+            const boxes2 = document.querySelectorAll('#header-right');
+            const boxes3 = document.querySelectorAll('#mm, #logo-div');
+
+            for (const box of boxes) {
+                box.classList.remove('open');
+                box.classList.remove('close');
+                box.classList.add('default');
+            }
+
+            for (const box of boxes2) {
+                box.classList.remove('open');
+                box.classList.remove('close');
+            }
+
+            for (const box of boxes3) {
+                box.classList.remove('unsearch');
+                box.classList.remove('close');
+            }
+        }, 300);
+
+        const boxes = document.querySelectorAll('#search-div, #search-button, #search-x-svg-div, #search-bar, #header-left, #header-right');
+        const boxes2 = document.querySelectorAll('#mm, #logo-div');
+
+        for (const box of boxes) {
+            box.classList.add('close');
+        }
+
+        for (const box of boxes2) {
+            box.classList.add('unsearch');
+            box.classList.remove('searching');
+            box.classList.remove('search');
+        }
+    } else {
+        document.getElementById('search-bar').value="";
+
+        const boxes = document.querySelectorAll('#livesearch, #search-button');
+
+        for (const box of boxes) {
+            box.classList.remove('results');
+            box.classList.add('none');
+        }
+    }
+}
+
+// OPEN MOBILE MENU
+
+function openMenu() {
+    const boxes = document.querySelectorAll('#mm-placeholder, #mm-background, #mm, #mm-button, #mm-menu, #body, #mm-open-svg, #mm-x-svg');
+
+    for (const box of boxes) {
+        box.classList.add('open');
+        box.classList.remove('default');
+    }
+}
+
+// CLOSE MOBILE MENU
+
+function closeMenu() {
+    const boxes = document.querySelectorAll('#mm-placeholder, #mm-background, #mm, #mm-button, #mm-menu, #body, #mm-open-svg, #mm-x-svg');
+
+    setTimeout(function() {
+        for (const box of boxes) {
+            box.classList.remove('open');
+            box.classList.remove('close');
+            box.classList.add('default');
+        }
+    }, 300);
+
+    for (const box of boxes) {
+        box.classList.add('close');
+    }
+}
+
+
+
+// THEME TOGGLE
+
+const toggleBtn = document.getElementById("theme-button");
+const theme = document.querySelector("body");
+let darkMode = localStorage.getItem("theme-dark");
+
+const enableDarkMode = () => {
+    theme.classList.add("theme-dark");
+    toggleBtn.classList.remove("dark");
+    localStorage.setItem("theme-dark", "enabled");
+};
+
+const disableDarkMode = () => {
+    theme.classList.remove("theme-dark");
+    toggleBtn.classList.add("dark");
+    localStorage.setItem("theme-dark", "disabled");
+};
+
+if (darkMode === "enabled") {
+    enableDarkMode(); // set state of darkMode on page load
+}
+
+toggleBtn.addEventListener("click", (e) => {
+    darkMode = localStorage.getItem("theme-dark"); // update darkMode when clicked
+    if (darkMode === "disabled") {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
+
+
+
+// TO THE TOP BUTTON
+
+var upBtn = document.getElementById("up-btn");
+var rootElement = document.documentElement;
+
+function scrollToTop() {
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+
+upBtn.addEventListener("click", scrollToTop)
+
+
+
+// FONT SIZE SLIDER
+
+var range = document.querySelector("#range");
+var bubble = document.querySelector("#bubble");
+var html = document.querySelector("html");
+const valueBox = document.getElementById("valueBox");
+const applyBtn = document.getElementById('applyBtn');
+
+checkFontSize();
+
+range.onload = function () {
+  
+}
+
+range.oninput = function () {
+    console.log(this.values);
+    html.style.setProperty("font-size", this.value + "px");
+    window.localStorage.setItem("fontSize", this.value + "px");
+    window.localStorage.setItem("range", this.value);
+};
+
+function checkFontSize() {
+    var fontSize = window.localStorage.getItem("fontSize");
+    var rangeValue = window.localStorage.getItem("range");
+
+    if (fontSize !== null) {
+        html.style.setProperty("font-size", fontSize);
+        range.value = rangeValue;
+    } else {
+        html.style.setProperty("font-size", "20px");
+        range.value = 15;
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const setValue = () => {
+        const
+        newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+        newPosition = 10 - (newValue * 0.2);
+    
+        bubble.innerHTML = `<span>${range.value}</span>`;
+        bubble.style.left = `calc(${newValue}% + (${newPosition}px))`;
+    };
+
+    setValue();
+    range.addEventListener('input', setValue);
+});
+
+bubble.style.display = 'none';
+
+range.addEventListener('mousedown', () => bubble.style.display = 'block');
+range.addEventListener('touchstart', () => bubble.style.display = 'block');
+range.addEventListener('focus', () => bubble.style.display = 'block');
+
+range.addEventListener('mouseup', () => bubble.style.display = 'none');
+range.addEventListener('touchend', () => bubble.style.display = 'none');
+range.addEventListener('blur', () => bubble.style.display = 'none');
+
+
+// Force scroll to bottom when clicking font slider
+document.addEventListener('DOMContentLoaded', function() {
+  range.addEventListener('input', function() {
+    requestAnimationFrame(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  });
+});
+
+</script>
